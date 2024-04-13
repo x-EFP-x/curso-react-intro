@@ -1,0 +1,35 @@
+li{
+    width: 488px;
+    font-weight: 500;
+    display: grid;
+    grid-template-columns: 1fr 1fr 7fr;
+    background-color: #f6c7b7;
+    margin-top: 5px;
+    list-style: none;
+    border-radius: 15px;
+}
+.li_button{
+    padding: 0px;
+    cursor: pointer;
+    height: 28px;
+    width: 28px;
+    margin: 16px;
+    left: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: #f6c7b7;
+    border-color: #003e4f;
+    transition: transform 0.5s ease;
+}
+
+.li_button:hover{
+    transform: rotate(360deg);
+}
+
+.p--complete{
+    text-decoration: line-through;
+}
+
+.li_completed{
+    color: green;
+}

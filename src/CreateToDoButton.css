@@ -1,0 +1,73 @@
+.button{
+    margin-top: 24px;
+    width: 450px;
+    background-color: #f7a398;
+    height: 50px;
+    border: none;
+    border-radius: 16px;
+}
+.button:hover{
+    background-color: #81322F;
+}
+ .divStyle{
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+ }
+
+.newToDo{
+    font-size: 16px;
+    height: 44px;
+    padding: 0%;
+    margin: 0%;
+    border: 0;
+    width: 450px;
+    font-weight: bold;
+    border-radius: 16px;
+    text-align: center;
+}
+
+.scene{
+    width: 200px;
+    height: 200px;
+    perspective: 600px;
+    margin-top: 200px;
+    margin-left: 100px;
+}
+
+.cube{ 
+    /* Con las 3 primeras lineas de codigo puedo hacer una superposicion muy chevere */
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid #ccc; */
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotate 10s infinite linear;
+    font-weight: 500;
+}
+
+.cube div{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.front  { transform: rotateY(0deg) translateZ(100px); }
+.back   { transform: rotateY(180deg) translateZ(100px); }
+.right  { transform: rotateY(90deg) translateZ(100px); }
+.left   { transform: rotateY(-90deg) translateZ(100px); }
+.top    { transform: rotateX(90deg) translateZ(100px); }
+.bottom { transform: rotateX(-90deg) translateZ(100px); }
+
+@keyframes rotate {
+    0%   { transform: rotateX(0deg) rotateY(0deg); }
+    100% { transform: rotateX(540deg) rotateY(360deg); }
+}
